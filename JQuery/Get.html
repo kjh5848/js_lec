@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- text()는 text만 반환
+    html()은 text + 태그도 같이 반환 -->
+    <p id="test">하이 <b>HTML</b>Text</p>
+
+    <button id="btn1">Show <b>HTML</b>Text</button>
+    <button id="btn2">Show <b>HTML</b>Text</button>
+    <script>
+        $("#btn1").click(() => alert("Text: " + $("#test").text()));
+        $("#btn2").click(() => alert("HTML: " + $("#test").html()));
+
+
+    </script>
+
+    <hr>
+    <br>
+    <!-- val()은 입력값을 반환한다. -->
+    <p>Name: <input type="text" id="test1"></p>
+    <button>Show Value</button>
+
+    <script>
+        $("button").click(() => alert("Value: " + $("#test1").val()));
+    </script>
+
+    <br>
+    <hr>
+    <!--attr()은 href 속성값을 반환한다. -->
+    <p><a href="https:/asef" id="w3s">W3Schools.com</a></p>
+
+    <button id="1">Show href Value</button>
+
+    <script>
+        $("#1").click(() => alert($("#w3s").attr("href")));
+    </script>
+
+</body>
+
+</html>

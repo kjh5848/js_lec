@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--
+    text() -> text만 넣는다.
+    html()은 태그를 적용시킨다.
+    val()은 input에 value값을 넣는다.-->
+
+    <p id="test1">a.</p>
+    <p id="test2">b.</p>
+
+    <p>Input field: <input type="text" id="test3"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+    <script>
+
+        $("#btn1").click(() => $("#test1").text("Hello world!"));
+        $("#btn2").click(() => $("#test2").html("<b>Hello world!</b>"));
+        $("#btn3").click(() => $("#test3").val("Dolly Duck"));
+
+    </script>
+
+    <br>
+    <hr>
+
+    <!-- text(), html() 및 val()에 대한 콜백 함수 -->
+    <p id="ttt1">This is a <b>bold</b> paragraph.</p>
+    <p id="ttt2">This is another <b>bold</b> paragraph.</p>
+
+    <button id="btnn1">Show Old/New Text</button>
+    <button id="btnn2">Show Old/New HTML</button>
+
+    <script>
+        $("#btnn1").click(() => $("#ttt1").text((i, origText) => {
+            return "Old text: " + origText + " New text: Hello world! (index: " + i + ")";
+        })
+        );
+
+        $("#btnn2").click(() => $("#ttt2").html((i, origText) => {
+            return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")";
+        })
+        );
+    </script>
+
+    <br>
+    <hr>
+
+    <!--속성 설정 - attr()  -->
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+    <button>Change href Value</button>
+
+    <p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+    <script>
+        $("button").click(() => $("#w3s").attr("href", "https://www.w3schools.com/jquery/"));   
+    </script>
+
+    <br>
+    <hr>
+    <!--속성 예시 2번째 링크에 마우스를 올리면 title로 바뀐다. -->
+    <p><a href="https://www.w3schools.com" id="w3s2">W3Schools.com</a></p>
+
+    <button>Change href Value</button>
+
+    <p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+
+    <script>
+
+        $("#w3s2").attr({
+            "href": "https://www.w3schools.com/jquery/",
+            "title": "W3Schools jQuery Tutorial"
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <button id="1">Hide</button>
+    <button id="2">show</button>
+
+    <p>This is a paragraph with little content.</p>
+    <p>This is another small paragraph.</p>
+
+    <script>
+
+        $("#1").click(() => $("p").hide(500));
+        $("#2").click(() => $("p").show(500));
+
+    </script>
+
+    <br>
+    <hr>
+    <!-- toggle로 다 할 수 있음 -->
+    <button id="b2"> toggle</button>
+
+    <p id="p2"> 안녕 </p>
+
+    <script>
+        $("#b2").click(() => $("#p2").toggle())
+    </script>
+
+
+
+
+</body>
+
+</html>
