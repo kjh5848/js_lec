@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //익명함수(함수를 변수에 담을때)
+        let m1 = function (n1, n2) {
+            console.log(n1 + n2)
+        }
+        m1(1, 2)
+
+        //람다식
+        let m2 = (n1, n2) => {
+            console.log(n1 + n2)
+        }
+        m2(1, 2)
+
+        //람다표현식(expression), 표현식은 리턴이 있어야 한다.
+        let m3 = (n1, n2) => n1 + n2
+        let result = m3(1, 2)
+        console.log(result)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
