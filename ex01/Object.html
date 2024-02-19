@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // Create an object:
+        const car = { type: "Fiat", model: "500", color: "white" };
+
+        // Display some data from the object:
+        document.getElementById("demo").innerHTML = "The car type is " + car.type;
+    </script>
+
+    <p id="demo1"></p>
+
+    <script>
+        // Create an object:
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Display data from the object:
+        document.getElementById("demo1").innerHTML = person.fullName();
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        // Create an object:
+        const person1 = {
+            firstName1: "John",
+            lastName1: "Doe",
+            id: 5566,
+            fullName1: function () {
+                return this.firstName1 + " " + this.lastName1;
+            }
+        };
+
+        // Display data from the object:
+        document.getElementById("demo2").innerHTML = person.fullName1;
+    </script>
+
+
+</body>
+
+</html>
