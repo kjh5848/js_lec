@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <h1>숨기기</h1>
-    <button onclick="hideDisplay()">display로 숨기기</button>
-    <button onclick="hideVisible()">visible로 숨기기</button>
-    <div class="box">
+    <h1>나타내기</h1>
+    <button id="btn-hide1">display로 나타내기</button>
+    <button id="btn-hide2">visible로 나타내기</button>
+    <div class="box" id="outerBox">
         <div class="box" id="innerBox1">
             내부박스1
         </div>
@@ -30,17 +30,17 @@
     </div>
 
     <script>
-        function hideDisplay() {
-            // let el = document.querySelector("#innerBox1");
-            // el.style.disply = "none";
-            $("#innerBox1").hide();
-        }
-        function hideVisible() {
-            // let el = document.querySelector("#innerBox2");
-            // el.style.visibility = "hidden";
-            $("#innerBox2").css("visibility", "hidden");
+        $("#btn-hide1").click(() => {
+            $("#innerBox1").hide()
+        })
+        // function showByVisible() {
+        //     let el = document.querySelector("#innerBox2");
+        //     el.style.visibility = "visible";
+        // }
 
-        }
+        $("#btn-hide2").click(() => {
+            $("#innerBox2").css("visibility", "hidden")
+        })
     </script>
 </body>
 
