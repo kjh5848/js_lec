@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/join" onsubmit="return valid()">
+        <input id="username" type="text" name="username" onkeyup="check()">
+        <button>회원가입</button>
+    </form>
+    <script>
+        let isCheck = false
+
+        function valid() {
+            if (isCheck == false) {
+                alert("아이디 중복체크가 되지 않았습니다.")
+            }
+
+            return isCheck;
+        }
+
+        function check() {
+            let username = $("#username").val()
+            if (username === "ssar") {
+                isCheck = true
+                alert("아이디 중복체크가 완료되었습니다.")
+            } else {// 무조건 해줘야 한다. true 상태를 기억하지 못한다.
+                isCheck = false
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
