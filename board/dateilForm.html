@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="/images/jobaralogo.png" height=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <!-- 로그인안하고 볼 수 있는 헤더 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <h2>채용공고</h2>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <h2>자유게시판</h2>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <h2>회원가입</h2>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <h2>로그인</h2>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/earlyaccess/hanna.css");
+
+        .navbar-nav,
+        .container,
+        body {
+            font-family: "Hanna", serif;
+            font-size: 20px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: navy !important;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #CDFFD8, #94B9FF);
+        }
+
+        footer.footer {
+            width: 100%;
+            background: #6C757D !important;
+            color: white;
+            font-size: 10px;
+        }
+
+        .btn-light:hover {
+            outline: 2px solid #0d6efd;
+        }
+
+        .active:active {
+            background-color: #0056b3;
+        }
+
+        .navbar-brand {
+            margin-bottom: 30px;
+        }
+
+        .navbar-nav {
+            margin-left: -20px;
+        }
+
+        .navbar {
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 p-5">
+        <div class="d-flex justify-content-between">
+            <div>
+                <h2><b>카카오에게 문의 드립니다.</b></h2>
+            </div>
+            <div>
+                <b>작성자</b> : 홍길동
+                <div>
+                    <button class="btn btn-warning me-1">수정</button>
+                    <button class="btn btn-danger">삭제</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <!-- 게시글내용 -->
+        <div class="mb-5">
+            <p>
+                카카오에 들어가려면 코테를 어떻게 준비해야 되나요?
+            </p>
+        </div>
+        <!-- 댓글 -->
+        <div class="card mt-3">
+            <!-- 댓글등록 -->
+            <div class="card-body">
+                <form action="/reply/save" method="post">
+                    <input type="hidden" name="boardId" value="1">
+                    <textarea class="form-control" rows="2" name="comment"></textarea>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-outline-primary mt-1">댓글등록</button>
+                    </div>
+                </form>
+            </div>
+            <!-- 댓글목록 -->
+            <div class="card-footer">
+                <b>댓글리스트</b>
+            </div>
+            <div class="list-group">
+                <!-- 댓글아이템 -->
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <div class="px-1 me-1 bg-primary text-white rounded">cos</div>
+                        <div>댓글 내용입니다</div>
+                    </div>
+                    <form action="/reply/1/delete" method="post">
+                        <button class="btn"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                </div>
+                <!-- 댓글아이템 -->
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <div class="px-1 me-1 bg-primary text-white rounded">ssar</div>
+                        <div>댓글 내용입니다</div>
+                    </div>
+                    <form action="/reply/1/delete" method="post">
+                        <button class="btn"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</body>
+
+</html>

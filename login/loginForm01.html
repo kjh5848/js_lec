@@ -2,12 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>juNit</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- 스타일관련 -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/lang/summernote-ko-KR.min.js"></script>
+
     <style>
         .btn-light:hover {
             outline: 2px solid #0d6efd;
@@ -56,11 +67,7 @@
         <div class="card row col-sm-3 col-10">
             <div class="card-header"><b>로그인을 해주세요</b></div>
             <div class="card-body">
-                <form action="/action_page.php" class="was-validated">
-                    <div class="btn-group d-flex justify-content-center mb-3">
-                        <button id="btnActiveUser" type="button" class="btn btn-light form-control">개인</button>
-                        <button id="btnActiveComp" type="button" class="btn btn-light form-control">기업</button>
-                    </div>
+                <form action="/action_page.php" method="post" class="was-validated">
                     <div class="mb-3 mt-3">
                         <label for="uname" class="form-label">아이디</label>
                         <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
@@ -75,22 +82,17 @@
                         <div class="valid-feedback">확인</div>
                         <div class="invalid-feedback">비밀번호를 적어주세요.</div>
                     </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
-                        <label class="form-check-label" for="myCheck">자동 로그인</label>
-                        <div class="valid-feedback">확인</div>
-                        <div class="invalid-feedback">(선택)</div>
-                    </div>
                     <div class="row">
                         <div class="col-12 text-center">
                             <button id="btnLogin" type="submit" class="btn btn-primary btn-lg">로그인</button>
                         </div>
-                        <div class="col-12 text-center mt-3">
-                            <a id="btnJoin" type="submit" class="btn-primary btn-lg">회원가입</a>
-                        </div>
-
                     </div>
                 </form>
+                <div class="row">
+                    <div class="col-12 text-center mt-3">
+                        <a href="" id="btnJoin" type="submit" class="btn-primary btn-lg">개인/기업 회원가입</a>
+                    </div>
+                </div>
                 <!-- <form action="/login" method="post" enctype="application/x-www-form-urlencoded">
 
                     <div class="d-flex justify-content-center mb-3">
